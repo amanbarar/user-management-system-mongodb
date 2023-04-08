@@ -22,7 +22,7 @@ const AddUser = () => {
     const [user, setUser] = useState(defaultValue);
     const onValueChange = (e) => {
         console.log(e.target.name, e.target.value);
-        setUser({ ...user, [e.target.name]: e.target.value })
+        setUser({ ...user, [e.target.name]: e.target.value }) //avoids override
         console.log(user);
     }
 
