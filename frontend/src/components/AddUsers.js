@@ -26,6 +26,10 @@ const AddUser = () => {
         console.log(user);
     }
 
+const addUserDetails = () => {
+    
+}
+
     return(
             <Container>
                 <Typography variant="h6">Add User(s)</Typography>
@@ -46,7 +50,7 @@ const AddUser = () => {
                         <Input onChange={(e) => onValueChange(e)} name="phone"/>
                     </FormControl>
                     <FormControl>
-                        <Button variant="contained">Add User</Button>
+                        <Button variant="contained" onClick={() => addUserDetails()}>Add User</Button>
                     </FormControl>
             </Container>
     );
