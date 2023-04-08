@@ -1,13 +1,24 @@
 import './App.css';
+
+
 import AddUser from './components/AddUsers';
 import NavBar from './components/NavBar';
+import Home from './components/Home';
+import AllUsers from './components/AllUsers';
 
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <NavBar />
-    </div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/all' element={<AllUsers />} />
+        <Route path='/add' element={<AddUser />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

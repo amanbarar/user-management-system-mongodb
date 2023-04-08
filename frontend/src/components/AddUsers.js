@@ -1,8 +1,8 @@
 const AddUser = () => {
     return(
-            <div>
+            <p>
                 Hello from the AddUser side
-            </div>
+            </p>
     );
 }
 
