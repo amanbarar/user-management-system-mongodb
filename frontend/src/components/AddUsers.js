@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button, FormControl, FormGroup, Input, InputLabel, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 
+import { addUser } from "../service/addUser";
 const Container = styled(FormGroup)`
     width: 50%;
     margin: 5% auto 0 auto;
@@ -27,7 +28,7 @@ const AddUser = () => {
     }
 
 const addUserDetails = () => {
-    
+    addUser(user);
 }
 
     return(
