@@ -27,8 +27,8 @@ const AddUser = () => {
         console.log(user);
     }
 
-const addUserDetails = () => {
-    addUser(user);
+const addUserDetails = async () => {
+    await addUser(user);
 }
 
     return(
