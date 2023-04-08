@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { Button, FormControl, FormGroup, Input, InputLabel, TextField, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 
@@ -9,10 +11,19 @@ const Container = styled(FormGroup)`
     }
 `
 
-const AddUser = () => {
+const defaultValue = {
+    name: "",
+    username: "",
+    email: "",
+    phone: ""
+}
 
+const AddUser = () => {
+    const [user, setUser] = useState(defaultValue);
     const onValueChange = (e) => {
-        console.log(e.target.value);
+        console.log(e.target.name, e.target.value);
+        setUser({ ...user, [e.target.name]: e.target.value })
+        console.log(user);
     }
 
     return(
