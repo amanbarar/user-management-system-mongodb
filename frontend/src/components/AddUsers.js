@@ -19,6 +19,10 @@ const AddUser = () => {
             <Container>
                 <Typography variant="h6">Add User(s)</Typography>
                     <FormControl>
+                        <InputLabel>Username</InputLabel>
+                        <Input onChange={(e) => onValueChange(e)} name="username"/>
+                    </FormControl>
+                    <FormControl>
                         <InputLabel>Name</InputLabel>
                         <Input onChange={(e) => onValueChange(e)} name="name"/>
                     </FormControl>
