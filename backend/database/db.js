@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
+dotenv.config();
 
 const Connection = async () => {
-    const URL = 'mongodb://127.0.0.1:27017/User-Management-System';
+    const URL = process.env.URL;
     try{
         await mongoose.connect(URL)
         console.log("Database connected successfully");
